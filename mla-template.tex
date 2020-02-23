@@ -1,0 +1,24 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage{ifpdf}
+\usepackage{mla}
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=mla-new, backend=biber]{biblatex}
+\usepackage{hyperref}
+
+% biblatex-mla does not support all the default entry types, and aliases all unsupported types to `customa`, which does not have a driver.
+\DeclareBibliographyAlias{customa}{article}
+
+\addbibresource{$bibliography$}
+
+\begin{document}
+\begin{mla}{$firstname$}{$lastname$}{$professor$}{$course$}{$date$}{$title$}
+    $body$
+    $if(bibliography)$
+    \newpage
+    \centering Works Cited
+    \printbibliography[heading=none]
+    $endif$
+\end{mla}
+\end{document}
