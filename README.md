@@ -36,3 +36,6 @@ software (like Zotero) supports exporting references as a BibTeX file.
 ## Dependencies
 - `pandoc`
 - `latexmk`
+- `biber`
+- `texlive-latex-recommended`
+- `texlive-latex-extra`
